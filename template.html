@@ -114,16 +114,19 @@
           </div>
         </div>
         <div class="row">
-          {% for kategory in wines_dict %}
+          {% for сategory in wines_dict %}
             <div class="col-12 section-title text-center mb-5">
-              <h2 class="d-block">{{kategory}}</h2>
+              <h2 class="d-block">{{сategory}}</h2>
             </div>
-          {% for wine in wines_dict[kategory] %}
-<!--              {% if wine.Цена|sort|first %}-->
+          {% for wine in wines_dict[сategory] %}
               <div class="col-lg-4 mb-5 col-md-6">
                 <div class="wine_v_1 text-center pb-4 pt-5">
                   {% if wine.Картинка %}
+                    {% if wine.Акция %}
+                    <img src="assets/profitable.png" style="width:10rem;height: 10rem;position:absolute;right: -20px;top: -20px;">
+                    {% endif %}
                     <img src="images/{{wine.Картинка}}" alt="Image" class="img-fluid">
+
                   {% else %}
                     <img src="https://dvmn.org/filer/canonical/1569944855/354/" alt="Image" class="img-fluid">
                   {% endif %}
@@ -138,7 +141,6 @@
                   </div>
                 </div>
               </div>
-<!--              {% endif %}-->
           {% endfor %}
           {% endfor %}
         </div>
