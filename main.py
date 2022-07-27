@@ -18,7 +18,7 @@ def get_excel_wines():
     return wines_dict
 
 
-def days_with_you():
+def get_company_age():
     '''Возвращает кол-во лет компании'''
 
     date_start = datetime.datetime(year=1920, month=1, day=1, hour=0)
@@ -41,7 +41,7 @@ def main():
 
     template = env.get_template('template.html')
 
-    rendered_page = template.render(days_with_you=days_with_you(), wines_dict=get_excel_wines())
+    rendered_page = template.render(company_age=get_company_age(), wines_dict=get_excel_wines())
 
     with open('index.html', 'w', encoding="utf8") as file:
         file.write(rendered_page)
