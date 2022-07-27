@@ -11,10 +11,10 @@ def get_excel_wines():
 
     excel_wines = pandas.read_excel(SETTING_PATH, na_values='some_dummy_na_value', keep_default_na=False)
     wines = excel_wines.to_dict(orient='records')
-    wines_dict = collections.defaultdict(list)
+    wine_cluster = collections.defaultdict(list)
     for i in wines:
-        wines_dict[i['Категория']].append(i)
-    return wines_dict
+        wine_cluster[i['Категория']].append(i)
+    return wine_cluster
 
 
 def get_right_ending_word_year(company_age):
