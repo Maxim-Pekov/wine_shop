@@ -12,8 +12,8 @@ def get_excel_wines():
     excel_wines = pandas.read_excel(SETTING_PATH, na_values='some_dummy_na_value', keep_default_na=False)
     wines = excel_wines.to_dict(orient='records')
     wine_cluster = collections.defaultdict(list)
-    for i in wines:
-        wine_cluster[i['Категория']].append(i)
+    for wine in wines:
+        wine_cluster[wine['Категория']].append(wine)
     return wine_cluster
 
 
