@@ -21,9 +21,9 @@ def get_excel_wines():
 def get_company_age():
     '''Возвращает кол-во лет компании'''
 
-    date_start = datetime.datetime(year=1920, month=1, day=1, hour=0)
+    year_start = 1920
     today = datetime.datetime.now()
-    years = today.year - date_start.year
+    years = today.year - year_start
     if years % 100 in [11, 12, 13, 14]:  # функция возвращает слово год в правильной форме в зависимости от окончания
         return f'{years} лет'
     if years % 10 == 1:
