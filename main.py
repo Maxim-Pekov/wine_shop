@@ -2,7 +2,6 @@ from http.server import HTTPServer, SimpleHTTPRequestHandler
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 import datetime
 import pandas
-from pprint import pprint
 import collections
 
 
@@ -14,7 +13,6 @@ def get_excel_wines():
     wines_dict = collections.defaultdict(list)
     for i in wines:
         wines_dict[i['Категория']].append(i)
-    # pprint(wines_dict)
     return wines_dict
 
 
@@ -24,7 +22,7 @@ def get_company_age():
     year_start = 1920
     today = datetime.datetime.now()
     company_age = today.year - year_start
-    if company_age % 100 in [11, 12, 13, 14]:  # функция возвращает слово год в правильной форме в зависимости от окончания
+    if company_age % 100 in [11, 12, 13, 14]:  # определяет окончание слова год
         return f'{company_age} лет'
     if company_age % 10 == 1:
         return f'{company_age} год'
