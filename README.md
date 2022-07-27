@@ -29,6 +29,13 @@ git clone https://github.com/Maxim-Pekov/wine_shop.git
 start main.py
 use http://127.0.0.1:8000/
 ```
+# Changes Directory of Excel file
+```bash
+1). Add directory name='.env'
+2). Putt into this directory line: SETTING_PATH = './cap/wines.xlsx'
+3). Change './cap/wines.xlsx' to our path
+```
+
 ## Project Goals
 Project Goals
 The code is written for educational purposes on online-course for web-developers dvmn.org.
