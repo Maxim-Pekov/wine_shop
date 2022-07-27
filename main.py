@@ -23,14 +23,14 @@ def get_company_age():
 
     year_start = 1920
     today = datetime.datetime.now()
-    years = today.year - year_start
-    if years % 100 in [11, 12, 13, 14]:  # функция возвращает слово год в правильной форме в зависимости от окончания
-        return f'{years} лет'
-    if years % 10 == 1:
-        return f'{years} год'
-    elif 0 < years % 10 < 5:
-        return f'{years} года'
-    return f'{years} лет'
+    company_age = today.year - year_start
+    if company_age % 100 in [11, 12, 13, 14]:  # функция возвращает слово год в правильной форме в зависимости от окончания
+        return f'{company_age} лет'
+    if company_age % 10 == 1:
+        return f'{company_age} год'
+    elif 0 < company_age % 10 < 5:
+        return f'{company_age} года'
+    return f'{company_age} лет'
 
 
 def main():
