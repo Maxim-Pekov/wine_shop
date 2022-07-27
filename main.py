@@ -33,17 +33,22 @@ def days_with_you():
     return f'{years} лет'
 
 
-env = Environment(
-    loader=FileSystemLoader('.'),
-    autoescape=select_autoescape(['html', 'xml'])
-)
+def main():
+    env = Environment(
+        loader=FileSystemLoader('.'),
+        autoescape=select_autoescape(['html', 'xml'])
+    )
 
-template = env.get_template('template.html')
+    template = env.get_template('template.html')
 
-rendered_page = template.render(days_with_you=days_with_you(), wines_dict=get_excel_wines())
+    rendered_page = template.render(days_with_you=days_with_you(), wines_dict=get_excel_wines())
 
-with open('index.html', 'w', encoding="utf8") as file:
-    file.write(rendered_page)
+    with open('index.html', 'w', encoding="utf8") as file:
+        file.write(rendered_page)
 
-server = HTTPServer(('0.0.0.0', 8000), SimpleHTTPRequestHandler)
-server.serve_forever()
+    server = HTTPServer(('127.0.0.1', 8000), SimpleHTTPRequestHandler)
+    server.serve_forever()
+
+
+if __name__ == '__main__':
+    main()
