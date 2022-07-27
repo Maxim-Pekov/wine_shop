@@ -16,19 +16,24 @@ def get_excel_wines():
     return wines_dict
 
 
+def get_right_ending_word_year(company_age):
+    if company_age % 100 in [11, 12, 13, 14]:
+        return 'лет'
+    elif company_age % 10 == 1:
+        return 'год'
+    elif 0 < company_age % 10 < 5:
+        return 'года'
+    return 'лет'
+
+
 def get_company_age():
     '''Возвращает кол-во лет компании'''
 
     year_start = 1920
     today = datetime.datetime.now()
     company_age = today.year - year_start
-    if company_age % 100 in [11, 12, 13, 14]:  # определяет окончание слова год
-        return f'{company_age} лет'
-    if company_age % 10 == 1:
-        return f'{company_age} год'
-    elif 0 < company_age % 10 < 5:
-        return f'{company_age} года'
-    return f'{company_age} лет'
+    word_year_in_ru = get_right_ending_word_year(company_age)
+    return f'{company_age} {word_year_in_ru}'
 
 
 def main():
