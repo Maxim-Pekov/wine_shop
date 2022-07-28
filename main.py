@@ -4,7 +4,7 @@ import datetime
 import pandas
 import collections
 from config import SETTING_PATH
-from pprint import pprint
+
 
 def get_excel_wines():
     '''Возвращает словарь с данными о вине полученным из Excel файла клиента'''

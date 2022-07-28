@@ -117,17 +117,15 @@
           {% for сategory, all_drinks in wine_cluster.items() %}
             <div class="col-12 section-title text-center mb-5">
               <h2 class="d-block">{{сategory}}</h2>
-<!--              <h2 class="d-block">{{win}}</h2>-->
             </div>
-          {% for drink in all_drinks %}
+            {% for drink in all_drinks %}
               <div class="col-lg-4 mb-5 col-md-6">
                 <div class="wine_v_1 text-center pb-4 pt-5">
                   {% if drink.Картинка %}
                     {% if drink.Акция %}
-                    <img src="assets/profitable.png" style="width:10rem;height: 10rem;position:absolute;right: -20px;top: -20px;">
+                      <img src="assets/profitable.png" style="width:10rem;height: 10rem;position:absolute;right: -20px;top: -20px;">
                     {% endif %}
                     <img src="images/{{drink.Картинка}}" alt="Image" class="img-fluid">
-
                   {% else %}
                     <img src="https://dvmn.org/filer/canonical/1569944855/354/" alt="Image" class="img-fluid">
                   {% endif %}
@@ -142,7 +140,7 @@
                   </div>
                 </div>
               </div>
-          {% endfor %}
+            {% endfor %}
           {% endfor %}
         </div>
       </div>
