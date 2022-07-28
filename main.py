@@ -4,7 +4,7 @@ import datetime
 import pandas
 import collections
 from config import SETTING_PATH
-
+from pprint import pprint
 
 def get_excel_wines():
     '''Возвращает словарь с данными о вине полученным из Excel файла клиента'''
@@ -45,7 +45,7 @@ def main():
 
     template = env.get_template('template.html')
 
-    rendered_page = template.render(company_age=get_company_age(), wines_dict=get_excel_wines())
+    rendered_page = template.render(company_age=get_company_age(), wine_cluster=get_excel_wines())
 
     with open('index.html', 'w', encoding="utf8") as file:
         file.write(rendered_page)
