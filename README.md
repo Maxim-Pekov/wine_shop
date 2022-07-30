@@ -42,12 +42,12 @@ Use these commands to start a project on your hardware.
 6. Open in browser
 [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 ---
-# Changes Directory of Excel file
-```bash
-1. Add directory name='.env'
-2. Putt into this directory line: SETTING_PATH = './cap/wines.xlsx'
-3. Change './cap/wines.xlsx' to our path
-```
+# Changes Directory of your Excel file
+
+1. Add directory into  ___./wine_shop/...___  by this name `.env`
+2. Putt into _.env_ directory this code: `SETTING_PATH = './excel/wines.xlsx'`
+3. `./excel/wines.xlsx` this is the path to your excel file 
+
 
 ## Project Goals
 Project Goals
