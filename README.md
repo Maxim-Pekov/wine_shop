@@ -30,15 +30,16 @@ Use these commands to start a project on your hardware.
 
     `python -m venv venv`
 2. Activate venv    
-    - Windows  `.\venv\Scripts\Activate.ps1`
+    - Windows  `.\venv\Scripts\activate`
     - Linux, Mac  `source ./.venv/bin/activate`
-3. Install requirements
+3. Go to the ./wine_shop directory
+4. Install requirements
 
     `pip install -r requirements.txt`
-4. Run this command
+5. Run this command
 
    `python main.py`
-5. Open in browser
+6. Open in browser
 [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 ---
 # Changes Directory of Excel file
