@@ -19,27 +19,39 @@ The data is loaded using Pandas from an Excel file, in which there is a table of
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 ![Jinja](https://img.shields.io/badge/jinja-white.svg?style=for-the-badge&logo=jinja&logoColor=black)
-
+---
 ## Installation
 
 Use these commands to start a project on your hardware.
 
-```bash
-git clone https://github.com/Maxim-Pekov/wine_shop.git
-start main.py
-use http://127.0.0.1:8000/
-```
+1. Install
+
+    `git clone https://github.com/Maxim-Pekov/wine_shop.git`
+
+    `python -m venv .venv`
+2. Activate venv    
+    - Windows  `.\venv\Scripts\Activate.ps1`
+    - Linux, Mac  `source ./.venv/bin/activate`
+3. Install requirements
+
+    `pip install -r requirements.txt`
+4. Run this command
+
+   `python main.py`
+5. Open in browser
+[http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+---
 # Changes Directory of Excel file
 ```bash
-1). Add directory name='.env'
-2). Putt into this directory line: SETTING_PATH = './cap/wines.xlsx'
-3). Change './cap/wines.xlsx' to our path
+1. Add directory name='.env'
+2. Putt into this directory line: SETTING_PATH = './cap/wines.xlsx'
+3. Change './cap/wines.xlsx' to our path
 ```
 
 ## Project Goals
 Project Goals
 The code is written for educational purposes on online-course for web-developers dvmn.org.
-
+---
 ## About me
 
 
