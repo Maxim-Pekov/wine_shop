@@ -28,7 +28,7 @@ Use these commands to start a project on your hardware.
 
     `git clone https://github.com/Maxim-Pekov/wine_shop.git`
 
-    `python -m venv .venv`
+    `python -m venv venv`
 2. Activate venv    
     - Windows  `.\venv\Scripts\Activate.ps1`
     - Linux, Mac  `source ./.venv/bin/activate`
