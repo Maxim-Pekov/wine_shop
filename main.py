@@ -21,7 +21,7 @@ def get_excel_wines():
     return wine_cluster
 
 
-def get_correct_form_of_the_word(company_age):
+def get_word_correct_form(company_age):
     if company_age % 100 in [11, 12, 13, 14]:
         return 'лет'
     elif company_age % 10 == 1:
@@ -34,11 +34,11 @@ def get_correct_form_of_the_word(company_age):
 def get_company_age():
     '''Возвращает кол-во лет компании'''
 
-    year_of_foundation = 1920
+    foundation_year = 1920
     today = datetime.datetime.now()
-    company_age = today.year - year_of_foundation
-    correct_form_of_the_word = get_correct_form_of_the_word(company_age)
-    return f'{company_age} {correct_form_of_the_word}'
+    company_age = today.year - foundation_year
+    word_correct_form = get_word_correct_form(company_age)
+    return f'{company_age} {word_correct_form}'
 
 
 def main():
