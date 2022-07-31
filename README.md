@@ -41,7 +41,7 @@ Use these commands to start a project on your hardware.
 6. Open in browser
 [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 ---
-# Changes Directory of your Excel file
+## Changes Directory of your Excel file
 
 1. Add directory into  ___./wine_shop/...___  by this name `.env`
 2. Putt into _.env_ directory this code: `SETTING_PATH = './excel/wines.xlsx'`
@@ -53,8 +53,11 @@ Project Goals
 The code is written for educational purposes on online-course for web-developers [dvmn.org](http://dvmn.org).
 ---
 ## About me
+[<img align="left" alt="maxim-pekov | LinkedIn" width="30px" src="https://img.icons8.com/color/48/000000/linkedin-circled--v3.png" />https://www.linkedin.com/in/maxim-pekov/](https://www.linkedin.com/in/maxim-pekov/)
+</br>
 
-
+<img align="left" alt="maxim-pekov" width="28px" src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Telegram_Messenger.png" />@MaxPekov
+</br>
 
 [//]: # (Карточка профиля: )
 ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Maxim-Pekov&theme=solarized_dark)
