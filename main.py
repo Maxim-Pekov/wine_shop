@@ -6,6 +6,20 @@ import collections
 import os
 from dotenv import load_dotenv
 
+BASE_PATH = 'wines.xlsx'
+
+
+def get_excel_wines():
+    '''Возвращает словарь с данными о напитках полученным из Excel файла клиента'''
+
+    SETTING_PATH = os.getenv('SETTING_PATH', BASE_PATH)
+    excel_wines = pandas.read_excel(SETTING_PATH, na_values='some_dummy_na_value', keep_default_na=False)
+    wines = excel_wines.to_dict(orient='records')
+    wine_cluster = collections.defaultdict(list)
+    for wine in wines:
+        wine_cluster[wine['Категория']].append(wine)
+    return wine_cluster
+
 
 def get_correct_form_of_the_word(company_age):
     if company_age % 100 in [11, 12, 13, 14]:
@@ -30,24 +44,12 @@ def get_company_age():
 def main():
     load_dotenv()
 
-    def get_excel_wines():
-        '''Возвращает словарь с данными о вине полученным из Excel файла клиента'''
-
-        excel_wines = pandas.read_excel(SETTING_PATH, na_values='some_dummy_na_value', keep_default_na=False)
-        wines = excel_wines.to_dict(orient='records')
-        wine_cluster = collections.defaultdict(list)
-        for wine in wines:
-            wine_cluster[wine['Категория']].append(wine)
-        return wine_cluster
-
     env = Environment(
         loader=FileSystemLoader('.'),
         autoescape=select_autoescape(['html', 'xml'])
     )
 
     template = env.get_template('template.html')
-    BASE_PATH = 'wines.xlsx'
-    SETTING_PATH = os.getenv('SETTING_PATH', BASE_PATH)
     rendered_page = template.render(company_age=get_company_age(), wine_cluster=get_excel_wines())
 
     with open('index.html', 'w', encoding="utf8") as file:
