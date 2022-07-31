@@ -50,7 +50,7 @@ Use these commands to start a project on your hardware.
 
 ## Project Goals
 Project Goals
-The code is written for educational purposes on online-course for web-developers dvmn.org.
+The code is written for educational purposes on online-course for web-developers [dvmn.org](http://dvmn.org).
 ---
 ## About me
 
