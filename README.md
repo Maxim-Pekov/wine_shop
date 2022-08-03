@@ -53,7 +53,7 @@ Project Goals
 The code is written for educational purposes on online-course for web-developers [dvmn.org](http://dvmn.org).
 ---
 ## About me
-[<img align="left" alt="maxim-pekov | LinkedIn" width="30px" src="https://img.icons8.com/color/48/000000/linkedin-circled--v3.png" />https://www.linkedin.com/in/maxim-pekov/](https://www.linkedin.com/in/maxim-pekov/)
+[<img align="left" alt="maxim-pekov | LinkedIn" width="30px" src="https://img.icons8.com/color/48/000000/linkedin-circled--v3.png" />linkedin.com/maxim-pekov](https://www.linkedin.com/in/maxim-pekov/)
 </br>
 
 <img align="left" alt="maxim-pekov" width="28px" src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Telegram_Messenger.png" />@MaxPekov
